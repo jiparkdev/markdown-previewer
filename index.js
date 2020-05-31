@@ -1,13 +1,30 @@
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      inputValue: "",
+    };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount() {}
+  handleChange(event) {
+    this.setState({
+      inputValue: event.target.value,
+    });
+  }
 
-  getNewQuote() {}
-
-  render() {}
+  render() {
+    console.log("[Index] inputValue:", this.state.inputValue);
+    return (
+      <div className="root-wrapper">
+        <Editor
+          input={this.state.inputValue}
+          handleChange={this.handleChange}
+        />
+        <Preview input={this.state.inputValue} />
+      </div>
+    );
+  }
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
