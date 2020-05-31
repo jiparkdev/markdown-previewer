@@ -14,9 +14,8 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("[Index] inputValue:", this.state.inputValue);
     return (
-      <div className="root-wrapper">
+      <div class="md-wrapper">
         <Editor
           input={this.state.inputValue}
           handleChange={this.handleChange}

@@ -4,11 +4,12 @@ class Preview extends React.Component {
   }
 
   render() {
-    console.log("[Preview] input:", this.props.input);
     return (
       <div className="md-preview-wrapper">
         <div className="md-preview-box">
+          <div className="md-preview-title">Markdown Preview</div>
           <div
+            className="md-preview"
             dangerouslySetInnerHTML={{
               __html: marked(this.props.input),
             }}
