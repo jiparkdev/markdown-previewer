@@ -10,6 +10,19 @@ body {
 
 .root-wrapper {
   padding: 1em;
+  border: 2px solid red;
+}
+
+.md-wrapper {
+  border: 2px solid green;
+}
+
+.md-editor-box {
+  border: 2px solid purple;
+}
+
+.md-preview-box {
+  border: 2px solid purple;
 }
 
 /* .root-wrapper {
